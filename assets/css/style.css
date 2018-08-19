@@ -1,4 +1,4 @@
-/* --- Fonts (except heading font-color) */
+/* Fonts (except heading font-color) */
 * {
     color: #777777;
     font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
@@ -10,13 +10,13 @@ h1 {
     font-size: 27px;
 }
 
-/* --- Min page width */
+/* Min page width */
 body {
     min-width: 320px;
     background-image: url("../images/texturetastic_gray.png");
 }
 
-/* --- Header */
+/* Header */
 #head {
     padding: 0;
     border: 2px solid #cccccc;
@@ -33,10 +33,12 @@ body {
     margin: 0;
 }
 
+/* --- Collapsing nav bar */
 #navbar {
     position: absolute;
     top: 40px;
     width: 108.7px;
+    z-index: 1;
 }
 
 [class="navbar-nav mr-auto"] {
@@ -47,7 +49,7 @@ button.navbar-toggler {
     background: #ffffff;
 }
 
-/* --- Main Section */
+/* Main Section */
 #section_h1 {
     color: #4aaaa5;
     width: 100%;
@@ -61,7 +63,7 @@ button.navbar-toggler {
     background: #ffffff;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     width: 100%;
     text-align: center;
@@ -73,18 +75,23 @@ footer {
     margin-top: 40px;
 }
 
-/* --- Portfolio icons */
+/* --- Sticky footer */
+#allExceptFooter {
+    min-height: calc(100vh - 113.2px)
+}
+
+/* Portfolio icons */
 .port_link {
     display: inline-block;
     margin: 30px, 0;
     position: relative;
-    height: 205px;
 }
 
 .port_icon_label {
     position: absolute;
-    top: 135px;
+    top: 66%;
     width: 100%;
+    height: 30%;
     padding: 18.6px 0;
     background-color: #4aaaa5;
     text-align: center;
@@ -93,6 +100,13 @@ footer {
     color: #ffffff;
 }
 
+/* Responsive images */
+img.img-fluid, .port_link {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Page */
 #name, #msg, #email {
     border: 1px #dddddd solid;
     width: 100%;
